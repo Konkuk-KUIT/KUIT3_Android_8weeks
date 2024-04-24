@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/siv_user_story_profile"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="13dp"
+        android:src="@drawable/default_profile"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.Full">
+
+    </com.google.android.material.imageview.ShapeableImageView>
+
+    <FrameLayout
+        android:id="@+id/fl_home_story2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="17dp"
+        app:layout_constraintBottom_toBottomOf="@id/siv_user_story_profile"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/siv_user_story_profile">
+
+        <ImageView
+            android:id="@+id/iv_home_story2_gray"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ellipse_84"/>
+
+        <ImageView
+            android:id="@+id/iv_home_story2_color"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ellipse_87"/>
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/tv_home_story2_nickname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="9dp"
+        android:text="@string/text_profile_name"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="@id/siv_user_story_profile"
+        app:layout_constraintStart_toStartOf="@id/siv_user_story_profile"
+        app:layout_constraintTop_toBottomOf="@id/siv_user_story_profile">
+
+    </TextView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
