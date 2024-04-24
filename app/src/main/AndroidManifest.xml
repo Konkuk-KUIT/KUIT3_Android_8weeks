@@ -3,7 +3,6 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <!-- 방법2 인터넷 권한 설정 -->
-    <uses-permission android:name="android.permission.INTERNET"/>
 
     <application
         android:networkSecurityConfig="@xml/network_security_config"
