@@ -39,6 +39,15 @@ class Home : Fragment() {
                         Glide.with(requireContext())
                             .load(response.result.postImage)
                             .into(binding.ivHomePostingImage)
+                        Glide.with(requireContext())
+                            .load(response.result.userProfileImage)
+                            .into(binding.sivHomePostingProfile)
+                        binding.tvHomePostingProfileName.setText(response.result.nickName)
+                        binding.tvHomePostingInfo.setText(response.result.nickName)
+                        binding.tvHomePostingContentName.setText(response.result.nickName)
+                        binding.tvHomePostingInfo2.setText("님 외 "+response.result.like+"명이 좋아합니다")
+                        binding.tvHomePostingContent.setText(response.result.contents)
+
                     }
                     if(response!=null){
                         Log.d("성공", response.result.postImage)
