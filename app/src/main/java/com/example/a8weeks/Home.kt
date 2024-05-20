@@ -62,8 +62,6 @@ class Home : Fragment() {
             }
 
         })
-
-
         return binding.root
     }
 

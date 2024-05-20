@@ -25,6 +25,3 @@ data class PostResult (
     @SerializedName("contents")
     val contents : String
 )
-
-
-
