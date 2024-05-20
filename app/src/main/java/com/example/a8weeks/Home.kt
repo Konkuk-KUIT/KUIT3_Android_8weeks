@@ -49,7 +49,6 @@ class Home : Fragment() {
                         binding.tvHomePostingProfileName.text = response.result.nickname
                         binding.tvHomePostingContentName.text = response.result.nickname
                         binding.tvHomePostingContent.text = response.result.contents
-
                     }
 
                     if (response != null) {
