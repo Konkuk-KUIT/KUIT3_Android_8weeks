@@ -42,6 +42,7 @@ android {
     }
     buildFeatures {
         compose = true
+        viewBinding = true
     }
     composeOptions {
         kotlinCompilerExtensionVersion = "1.5.1"
@@ -74,12 +75,15 @@ dependencies {
     implementation("com.google.android.material:material:1.11.0")
     implementation("androidx.appcompat:appcompat:1.6.1")
 
-    /**사용법1 의존성 추가
-     *
-     *
-     *
-     *
-     * **/
+    // 사용법1 의존성 추가
+    implementation("com.squareup.retrofit2:retrofit:2.6.4");
+    implementation("com.squareup.retrofit2:converter-gson:2.6.4");
+    implementation("com.squareup.retrofit2:converter-scalars:2.6.4");
+    implementation("com.squareup.okhttp3:okhttp:4.9.3");
+    implementation("com.squareup.okhttp3:logging-interceptor:4.9.2");
+    implementation("com.github.bumptech.glide:glide:4.13.2");
+
+
 
 
 
