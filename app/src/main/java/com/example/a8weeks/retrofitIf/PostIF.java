@@ -14,4 +14,7 @@ public interface PostIF {
     *
     *
     * **/
+
+   @GET("/week/post")
+   Call<PostData> getPosts();
 }

@@ -36,6 +36,33 @@ class Home : Fragment() {
          *
          * **/
 
+        val retrofit = Retrofit.Builder().baseUrl("http://3.34.69.27")
+            .addConverterFactory(GsonConverterFactory.create()).build()
+
+        val service = retrofit.create(PostIF::class.java)
+
+        service.posts.enqueue(object :Callback<PostData> {
+            override fun onResponse(call: Call<PostData>, response: Response<PostData>) {
+                if(response.isSuccessful){
+                    val response2 = response.body()
+
+                    if(response2 != null){
+                        Glide.with(requireContext())
+                            .load(response2.result.postImage)
+                            .into(binding.ivHomePostingImage)
+                    }
+
+                    if(response2 != null){
+                        Log.d("성공", response2.result.postImage)
+                    }
+                }
+            }
+
+            override fun onFailure(call: Call<PostData>, t: Throwable) {
+                Log.d("실패", t.message.toString())
+            }
+        })
+
 
         return binding.root
     }
